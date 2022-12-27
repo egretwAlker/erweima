@@ -20,7 +20,7 @@ export default {
     QrStream,
     QrCapture,
     QrDropzone
-  }
+  },
 };
 </script>
 
@@ -28,8 +28,8 @@ export default {
 <div class="flex-row items-center mx-auto w-full lg:max-w-md min-h-screen bg-white shadow">
 <input class="rounded-lg bg-gray-500 w-full" type="text" v-model="message" />
 <div @click="fc = 1-fc">
-<QrcodeVue v-if="fc === 0" :value="message" class="mx-auto"></QrcodeVue>
-<QrStream v-else @decode="onDecode" class="mx-auto"/>
+<QrcodeVue v-if="fc === 0" :value="message" :size="300" class="mx-auto"></QrcodeVue>
+<QrStream v-else @decode="onDecode" class="w-full"/>
 </div>
 </div>
 </template>
